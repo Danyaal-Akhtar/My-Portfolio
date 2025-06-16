@@ -1,12 +1,21 @@
-# React + Vite
+# Portfolio de [Ton Nom]
+Bienvenue sur mon portfolio en ligne !
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Ce que vous trouverez ici
+- Mes projets réalisés avec description et technologies utilisées
 
-Currently, two official plugins are available:
+- Mes compétences techniques et mes outils favoris
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Mes expériences professionnelles et mes formations
 
-## Expanding the ESLint configuration
+- Mes contacts et liens vers mes réseaux sociaux
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Technologies utilisées
+Langages : HTML, CSS, JavaScript, React
+
+
+Email : danyakhtar1003@gmail.com
+
+LinkedIn : https://www.linkedin.com/in/danyaalakhtar/
+
+GitHub : https://github.com/Danyaal-Akhtar
