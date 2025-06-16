@@ -1,4 +1,4 @@
-# Portfolio de [Ton Nom]
+# Portfolio de Danyaal
 Bienvenue sur mon portfolio en ligne !
 
 ## Ce que vous trouverez ici
@@ -10,12 +10,10 @@ Bienvenue sur mon portfolio en ligne !
 
 - Mes contacts et liens vers mes réseaux sociaux
 
-### Technologies utilisées
+## Technologies utilisées
 Langages : HTML, CSS, JavaScript, React
 
-
+## Informations
 Email : danyakhtar1003@gmail.com
-
 LinkedIn : https://www.linkedin.com/in/danyaalakhtar/
-
 GitHub : https://github.com/Danyaal-Akhtar
