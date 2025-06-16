@@ -137,23 +137,19 @@ export default function Skills() {
             Outils <br /> et{" "}
             <span className="text-purple-400">compétences</span>
           </h1>
-          <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
-            {/* Ajoute ici ta description ou laisse vide si tu veux */}
-          </p>
+          <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base"></p>
         </header>
       </div>
 
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black text-white w-full">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillsData.map((skill) => (
-            <SkillBox
-              key={skill.id}
-              image={skill.image}
-              title={skill.title}
-              description={skill.description}
-            />
-          ))}
-        </div>
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black text-white w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {skillsData.map((skill) => (
+          <SkillBox
+            key={skill.id}
+            image={skill.image}
+            title={skill.title}
+            description={skill.description}
+          />
+        ))}
       </section>
     </section>
   );
