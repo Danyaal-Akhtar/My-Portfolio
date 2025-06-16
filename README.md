@@ -15,5 +15,7 @@ Langages : HTML, CSS, JavaScript, React
 
 ## Informations
 Email : danyakhtar1003@gmail.com
+
 LinkedIn : https://www.linkedin.com/in/danyaalakhtar/
+
 GitHub : https://github.com/Danyaal-Akhtar
