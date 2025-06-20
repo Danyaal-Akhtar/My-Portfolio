@@ -6,7 +6,7 @@ export default function Navbar() {
   const NavbarLinks = [
     { id: 1, name: "Accueil", link: "#home" },
     { id: 2, name: "À propos", link: "#about" },
-    { id: 3, name: "Formations", link: "#formations" },
+    { id: 3, name: "Formation", link: "#formations" },
     { id: 4, name: "Compétences", link: "#skills" },
     { id: 5, name: "Expériences", link: "#experiences" },
     { id: 6, name: "Projets", link: "#projects" },

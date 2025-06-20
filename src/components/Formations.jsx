@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import iut from "/iut.jpg";
 import lycee from "/lycee.jpg";
-import gameloft from "/gameloft.png";
+
 import "aos/dist/aos.css";
 
 const formations = [

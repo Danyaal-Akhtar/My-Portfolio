@@ -91,39 +91,57 @@ export default function Projects() {
     {
       image: project1,
       title: "Référencement de jeux de société",
-      description: `Dans le cadre de la SAE 3.01 (2025), nous avons travaillé en groupe de quatre pour nettoyer, à l’aide de la bibliothèque Pandas, un fichier Excel recensant près de 17 000 jeux de société appartenant à l’Université Sorbonne Paris Nord, dont certains remontent au XIXe siècle. Ces données ont été structurées puis intégrées dans une base de données. Nous avons ensuite conçu un site web avec une interface intuitive permettant de consulter l’ensemble de la collection, de gérer les fiches des jeux, auteurs et éditeurs, ainsi que de suivre les prêts et la localisation des jeux.
+      description: `Dans le cadre de la SAE 3.01 en 2025, j’ai participé au développement d’une application web destinée à la gestion de la collection de jeux de société de l’Université Sorbonne Paris Nord, qui regroupe près de 17 000 références, certaines datant du XIXe siècle. Le projet visait à remplacer un fichier Excel unique, devenu inadapté aux besoins de l’équipe en charge de la collection.
+
+En travaillant en groupe de quatre, nous avons d’abord nettoyé et structuré les données grâce à la bibliothèque Pandas, avant de les intégrer dans une base de données relationnelle conçue pour permettre des évolutions futures. Nous avons ensuite développé une interface web intuitive permettant de consulter l’ensemble de la collection, de gérer les fiches des jeux, des auteurs et des éditeurs, mais aussi de suivre les prêts et la localisation physique des jeux.
+
+Ce projet m’a permis de consolider mes compétences en traitement de données, en modélisation de base de données et en développement web, tout en expérimentant le travail collaboratif sur une problématique concrète, avec des enjeux réels de conservation et de valorisation patrimoniale.
 Langages : Python, PHP, HTML, CSS, JavaScript
 Lien : https://ludotech.kesug.com`,
     },
     {
       image: project2,
       title: "Jeu de Pong",
-      description: `En 2024, je souhaitais développer un tout premier jeu. J'ai donc choisi de créer le jeu du pong codé en Python. À travers ce projet, j'ai appris énormément de choses, notamment la bibliothèque Pygame, une ressource indispensable pour le développement de jeux et d'applications multimédia en Python.
+      description: `En 2024, j’ai décidé de me lancer dans le développement de mon tout premier jeu vidéo : une version du classique Pong, codée en Python à l’aide de la bibliothèque Pygame. Ce projet m’a permis de découvrir les bases de la programmation de jeux, notamment la gestion des événements, les mouvements des objets à l’écran, la détection des collisions, ainsi que la mise en place d’une boucle de jeu fluide.
+
+Grâce à Pygame, j’ai pu concevoir une interface simple et fonctionnelle tout en consolidant mes compétences en structuration de code, en logique temps réel et en optimisation de l’expérience utilisateur. Ce projet a constitué une étape formatrice dans mon parcours, en m’ouvrant à l’univers du développement de jeux 2D et en approfondissant ma maîtrise de Python.
 Langage : Python
 Lien : https://github.com/Danyaal-Akhtar/Pong-game.git`,
     },
     {
       image: project3,
       title: "Organisation d'un travail d'équipe",
-      description: `Pour cette SAE, nous avons étudié un événement culturel, le Festival Hauts-de-Seine Digital Games 2024, via photos, interviews et sondages, afin de concevoir une nouvelle édition 2025 et créer un site web dédié.
+      description: `Dans le cadre de cette SAE, notre objectif était de documenter un événement culturel existant, puis d’imaginer une nouvelle édition pour 2025 à travers la création d’un site web dédié. Nous avons choisi le Festival Hauts-de-Seine Digital Games, un événement parisien majeur autour du jeu vidéo, de l’IA et des technologies numériques.
+
+Notre équipe a réalisé des comptes rendus, interviews, sondages et photos pour restituer l’édition 2024 et proposer une vision créative pour l’année suivante. Le site web présentait le concept, le programme envisagé, ainsi qu’une page dédiée à notre démarche de conception.
+
+En tant que chef de projet, j’ai coordonné les différentes étapes : collecte de contenu, développement du site, organisation du travail et suivi de l’avancement. Cette expérience m’a permis de développer mes compétences en gestion d’équipe, planification stratégique, prise de décision et communication collaborative dans un contexte dynamique et concret.
 Lien : https://scanas2005.github.io/HSDG/`,
     },
     {
       image: project4,
       title: "Calculatrice",
-      description: `Projet de calculatrice en Java et C#. Développement d’une application capable de faire des opérations de base, en utilisant UML, puis réimplémentée en C# pour renforcer mes compétences.
-Langages : Java et C#
+      description: `Développement d'une calculatrice en Java capable de réaliser des opérations arithmétiques de base (addition, soustraction, multiplication, division) sur des entiers. Le projet s’appuie sur une modélisation UML rigoureuse, avec une architecture orientée objet : une classe abstraite Operation étendue par des classes spécifiques (Addition, Soustraction, etc.), et une gestion fine des erreurs comme la division par zéro.
+Pour permettre des calculs imbriqués, j'ai introduit la notion d’expressions composées à travers une classe abstraite Expression, permettant par exemple d’évaluer récursivement des formules telles que (17 - 2) / (2 + 3).
+Ce projet m’a permis de consolider mes bases en Java, UML, programmation orientée objet et gestion des exceptions, tout en développant une approche méthodique de la conception logicielle.
 Lien : https://github.com/Danyaal-Akhtar/SAE-Java-R201.git`,
     },
     {
       image: project5,
       title: "Installation de services réseaux",
-      description: `Création d’un environnement de développement sur disque externe bootable, avec installation de système, compilateurs, serveur web, et SGBD. Apprentissage autonome avec évaluations pratiques.`,
+      description: `Pour cette SAÉ, notre objectif était de créer un environnement de développement sur un disque externe bootable, Nous devions installer un système complet avec compilateurs, serveur web et Système de Gestion de Base de Données (SGBD). La première séance a consisté à distribuer le matériel et à installer le système, en mettant à jour les packages de base. Les séances suivantes se déroulaient en autonomie, avec des recherches sur Internet pour répondre aux questions.
+La méthode d'auto-apprentissage, combinée à des évaluations pratiques et automatisées, semblait efficace pour acquérir et tester les compétences techniques. En résumé, c'était une initiative enrichissante pour approfondir mes connaissances en informatique pratique notamment en réseau informatique.  `,
     },
     {
       image: project6,
       title: "Création d'une base de données",
-      description: `Conception d'une base de données pour le projet "Freedom in the World". Stockage structuré de données sur les libertés civiles et droits politiques par pays, utile pour les chercheurs et ONG.`,
+      description: `Dans cette SAE, j’ai participé à la création d’une base de données robuste destinée à stocker et organiser les données du projet Freedom in the World, qui mesure les libertés civiles et les droits politiques à travers le monde. L’objectif principal était de structurer ces informations de manière claire, avec des tables dédiées aux pays, régions, statuts de liberté et indicateurs de développement selon les critères des Nations Unies.
+
+Chaque enregistrement contenait des scores annuels détaillés des libertés civiles et politiques par pays, permettant ainsi des analyses comparatives sur le temps et l’espace. Cette base de données sert d’outil précieux pour les chercheurs, décideurs, médias et activistes, facilitant la compréhension des avancées et des défis en matière de droits humains à l’échelle mondiale.
+
+Ce projet m’a permis de renforcer mes compétences en modélisation de données, gestion de bases relationnelles et conception d’infrastructures adaptées à des besoins analytiques complexes.
+
+`,
     },
   ];
 
