@@ -4,13 +4,14 @@ import "aos/dist/aos.css";
 import project1 from "/project1.png";
 import project2 from "/project2.png";
 import project3 from "/project3.png";
+import project4 from "/project4.webp";
+import project5 from "/project5.webp";
+import project6 from "/project6.jpg";
 
 const Modal = ({ project, onClose }) => {
   if (!project) return null;
 
-  const handleContentClick = (e) => {
-    e.stopPropagation();
-  };
+  const handleContentClick = (e) => e.stopPropagation();
 
   return (
     <div
@@ -79,38 +80,50 @@ export default function Projects() {
   }, []);
 
   useEffect(() => {
-    if (selectedProject) {
-      AOS.refresh();
-    }
+    if (selectedProject) AOS.refresh();
   }, [selectedProject]);
 
   const listprojects = [
     {
       image: project1,
       title: "Référencement de jeux de société",
-      description: `En 2024, je souhaitais développer un tout premier jeu. J'ai donc choisi de créer le jeu du pong codé en Python. À travers ce projet, j'ai appris énormément de choses, notamment la bibliothèque Pygame, une ressource indispensable pour le développement de jeux et d'applications multimédia en Python.
-Ce projet m'a permis d'améliorer mes compétences en Python de manière significative. J'ai pu explorer les concepts de gestion des événements, de manipulation des sprites, et de gestion des collisions, tous essentiels dans le développement de jeux interactifs. De plus, cela m'a ouvert les portes vers d'autres bibliothèques et techniques de programmation que je ne connaissais pas auparavant.
-Au-delà de l'aspect technique, créer ce jeu m'a également appris la patience et la persévérance nécessaires pour surmonter les défis de développement. J'ai di résoudre de nombreux problèmes et ajuster continuellement mon code pour améliorer l'expérience utilisateur et rendre le jeu plus fluide.`,
+      description: `Dans le cadre de la SAE 3.01 (2025)...`,
     },
     {
       image: project2,
       title: "Jeu de Pong",
-      description: `En 2024, je souhaitais développer un tout premier jeu. J'ai donc choisi de créer le jeu du pong codé en Python. À travers ce projet, j'ai appris énormément de choses, notamment la bibliothèque Pygame, une ressource indispensable pour le développement de jeux et d'applications multimédia en Python.
-Ce projet m'a permis d'améliorer mes compétences en Python de manière significative. J'ai pu explorer les concepts de gestion des événements, de manipulation des sprites, et de gestion des collisions, tous essentiels dans le développement de jeux interactifs. De plus, cela m'a ouvert les portes vers d'autres bibliothèques et techniques de programmation que je ne connaissais pas auparavant.
-Au-delà de l'aspect technique, créer ce jeu m'a également appris la patience et la persévérance nécessaires pour surmonter les défis de développement. J'ai di résoudre de nombreux problèmes et ajuster continuellement mon code pour améliorer l'expérience utilisateur et rendre le jeu plus fluide.`,
+      description: `En 2024, je souhaitais développer un tout premier jeu...`,
     },
     {
       image: project3,
       title: "Organisation d'un travail d'équipe",
-      description: `Pour cette SAE, nous avons étudié un événement culturel, le Festival Hauts-de-Seine Digital Games 2024, via photos, interviews et sondages, afin de concevoir une nouvelle édition 2025 et créer un site web dédié.
-Notre équipe, spécialisée en collecte de contenu, analyse, développement web et création visuelle, a valorisé sa contribution sur une page du site. En tant que chef de projet, j’ai coordonné l’équipe, supervisé les tâches et assuré le suivi du projet.
-Cette expérience a renforcé mes compétences en gestion d’équipe, planification et communication, tout en développant ma capacité à motiver mes collègues vers nos objectifs communs.`,
+      description: `Pour cette SAE, nous avons étudié un événement culturel...`,
+    },
+    {
+      image: project4,
+      title: "Calculatrice",
+      description: `Projet de calculatrice en Java et C#...`,
+    },
+    {
+      image: project5,
+      title: "Installation de services réseaux",
+      description: `Création d’un environnement de développement...`,
+    },
+    {
+      image: project6,
+      title: "Création d'une base de données",
+      description: `Conception d'une base de données pour le projet...`,
     },
   ];
 
   return (
-    <main className="p-4">
-      <section data-aos="fade-up" data-aos-delay="300">
+    <main className="p-4 mb-20">
+      <section
+        id="projects"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        className="mt-16"
+      >
         <header className="text-center">
           <h1 className="text-3xl text-white sm:text-4xl font-bold mb-6">
             Mes <span className="text-purple-400">Projets</span>
@@ -125,7 +138,7 @@ Cette expérience a renforcé mes compétences en gestion d’équipe, planifica
       <section
         data-aos="fade-up"
         data-aos-delay="500"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 mt-16 w-fit mx-auto"
       >
         {listprojects.map((project, index) => (
           <ProjectCard

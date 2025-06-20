@@ -5,6 +5,9 @@ import "aos/dist/aos.css";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Experience from "./components/Experiences";
+import Formations from "./components/Formations";
+import Footer from "./components/Footer";
 
 export default function App() {
   useEffect(() => {
@@ -16,8 +19,11 @@ export default function App() {
     <main className="bg-gray-950">
       <Hero />
       <About />
+      <Formations />
       <Skills />
+      <Experience />
       <Projects />
+      <Footer />
     </main>
   );
 }

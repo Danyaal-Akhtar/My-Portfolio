@@ -6,8 +6,10 @@ export default function Navbar() {
   const NavbarLinks = [
     { id: 1, name: "Accueil", link: "#home" },
     { id: 2, name: "À propos", link: "#about" },
-    { id: 3, name: "Outils", link: "#skills" },
-    { id: 4, name: "Projets", link: "#projects" },
+    { id: 3, name: "Formations", link: "#formations" },
+    { id: 4, name: "Compétences", link: "#skills" },
+    { id: 5, name: "Expériences", link: "#experiences" },
+    { id: 6, name: "Projets", link: "#projects" },
   ];
 
   return (
@@ -40,9 +42,6 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <button className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-lg">
-              Contact
-            </button>
           </nav>
         </div>
 

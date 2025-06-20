@@ -1,9 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import dev from "/dev.jpg";
-import github from "/github.png";
-import linkedin from "/linkedin.png";
-import react from "/react.png";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Danyaal from "/Danyaal.pdf";
 
 export default function Hero() {
@@ -11,23 +9,25 @@ export default function Hero() {
     <div className="relative overflow-hidden min-h-[550px] sm:min-h-[600px] flex flex-col items-center">
       <div
         className="
-    md:h-[550px] 
-    h-[500px] 
-    w-[450px] 
-    bg-gradient-to-r 
-    from-[#6d2897] 
-    via-[#86cf5f] 
-    to-[#bb61c5] 
-    transform 
-    rotate-45 
-    z-0 
-    absolute 
-    right-2 
-    top-28 
-    rounded-3xl
-  "
+          md:h-[550px] 
+          h-[500px] 
+          w-[450px] 
+          bg-gradient-to-r 
+          from-[#6d2897] 
+          via-[#86cf5f] 
+          to-[#bb61c5] 
+          transform 
+          rotate-45 
+          z-0 
+          absolute 
+          right-2 
+          top-28 
+          rounded-3xl
+        "
       ></div>
+
       <Navbar />
+
       <main
         id="home"
         className="flex flex-col md:flex-row items-center justify-center w-full px-4 md:px-52 pb-4 md:pb-24 md:pt-32 pt-24 mt-14 md:mt-0 z-10"
@@ -55,15 +55,33 @@ export default function Hero() {
             un champ où la curiosité est plus importante que la connaissance." —
             Tim Berners-Lee
           </p>
-          <div className="flex items-center space-x-4 mb-6">
-            <a href="#">
-              <img src={github} alt="github" className="w-11 h-11"></img>
-            </a>
 
-            <a href="#">
-              <img src={linkedin} alt="Linkedin" className="w-11 h-11"></img>
-            </a>
+          {/* Icônes GitHub / LinkedIn */}
+          <div className="flex justify-start space-x-4 text-white text-2xl mb-6">
+            {[
+              {
+                icon: <FaGithub />,
+                link: "https://github.com/Danyaal-Akhtar",
+              },
+              {
+                icon: <FaLinkedin />,
+                link: "https://www.linkedin.com/in/danyaalakhtar",
+              },
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-purple-300 transition-transform transform hover:scale-110"
+                aria-label={item.link}
+              >
+                {item.icon}
+              </a>
+            ))}
           </div>
+
+          {/* Bouton Télécharger le CV */}
           <a href={Danyaal} download>
             <button className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] hover:bg-[#801b9c] rounded-full text-lg">
               Télécharger le CV
@@ -71,6 +89,7 @@ export default function Hero() {
           </a>
         </section>
 
+        {/* Image développeur */}
         <figure
           data-aos="fade-up"
           data-aos-delay="500"

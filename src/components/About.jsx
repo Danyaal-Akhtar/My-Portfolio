@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import dev from "/dev.jpg";
 import img_about2 from "/img_about2.jpg";
 
 export default function About() {
+  useEffect(() => {
+    AOS.init({ once: true, duration: 700 });
+  }, []);
+
   return (
     <section
       id="about"
@@ -49,8 +56,8 @@ export default function About() {
           </header>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-            Bonjour, je suis Danyaal AKHTAR Je suis étudiant en 2ème année de
-            BUT Informatique à l’Université Sorbonne Paris Nord. Passionné par
+            Bonjour, je suis Danyaal AKHTAR, étudiant en 2ème année de BUT
+            Informatique à l’Université Sorbonne Paris Nord. Passionné par
             l’informatique, je suis particulièrement attiré par la programmation
             et le développement de logiciels. J’aime explorer de nouvelles
             technologies et relever des défis. Mon objectif est de construire
