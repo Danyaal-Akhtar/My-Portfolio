@@ -11,7 +11,9 @@ import project6 from "/project6.jpg";
 const Modal = ({ project, onClose }) => {
   if (!project) return null;
 
-  const handleContentClick = (e) => e.stopPropagation();
+  const handleContentClick = (e) => {
+    e.stopPropagation();
+  };
 
   return (
     <div
@@ -80,44 +82,53 @@ export default function Projects() {
   }, []);
 
   useEffect(() => {
-    if (selectedProject) AOS.refresh();
+    if (selectedProject) {
+      AOS.refresh();
+    }
   }, [selectedProject]);
 
   const listprojects = [
     {
       image: project1,
       title: "Référencement de jeux de société",
-      description: `Dans le cadre de la SAE 3.01 (2025)...`,
+      description: `Dans le cadre de la SAE 3.01 (2025), nous avons travaillé en groupe de quatre pour nettoyer, à l’aide de la bibliothèque Pandas, un fichier Excel recensant près de 17 000 jeux de société appartenant à l’Université Sorbonne Paris Nord, dont certains remontent au XIXe siècle. Ces données ont été structurées puis intégrées dans une base de données. Nous avons ensuite conçu un site web avec une interface intuitive permettant de consulter l’ensemble de la collection, de gérer les fiches des jeux, auteurs et éditeurs, ainsi que de suivre les prêts et la localisation des jeux.
+Langages : Python, PHP, HTML, CSS, JavaScript
+Lien : https://ludotech.kesug.com`,
     },
     {
       image: project2,
       title: "Jeu de Pong",
-      description: `En 2024, je souhaitais développer un tout premier jeu...`,
+      description: `En 2024, je souhaitais développer un tout premier jeu. J'ai donc choisi de créer le jeu du pong codé en Python. À travers ce projet, j'ai appris énormément de choses, notamment la bibliothèque Pygame, une ressource indispensable pour le développement de jeux et d'applications multimédia en Python.
+Langage : Python
+Lien : https://github.com/Danyaal-Akhtar/Pong-game.git`,
     },
     {
       image: project3,
       title: "Organisation d'un travail d'équipe",
-      description: `Pour cette SAE, nous avons étudié un événement culturel...`,
+      description: `Pour cette SAE, nous avons étudié un événement culturel, le Festival Hauts-de-Seine Digital Games 2024, via photos, interviews et sondages, afin de concevoir une nouvelle édition 2025 et créer un site web dédié.
+Lien : https://scanas2005.github.io/HSDG/`,
     },
     {
       image: project4,
       title: "Calculatrice",
-      description: `Projet de calculatrice en Java et C#...`,
+      description: `Projet de calculatrice en Java et C#. Développement d’une application capable de faire des opérations de base, en utilisant UML, puis réimplémentée en C# pour renforcer mes compétences.
+Langages : Java et C#
+Lien : https://github.com/Danyaal-Akhtar/SAE-Java-R201.git`,
     },
     {
       image: project5,
       title: "Installation de services réseaux",
-      description: `Création d’un environnement de développement...`,
+      description: `Création d’un environnement de développement sur disque externe bootable, avec installation de système, compilateurs, serveur web, et SGBD. Apprentissage autonome avec évaluations pratiques.`,
     },
     {
       image: project6,
       title: "Création d'une base de données",
-      description: `Conception d'une base de données pour le projet...`,
+      description: `Conception d'une base de données pour le projet "Freedom in the World". Stockage structuré de données sur les libertés civiles et droits politiques par pays, utile pour les chercheurs et ONG.`,
     },
   ];
 
   return (
-    <main className="p-4 mb-20">
+    <main className="p-4">
       <section
         id="projects"
         data-aos="fade-up"
