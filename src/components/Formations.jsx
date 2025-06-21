@@ -42,7 +42,7 @@ const Formation = () => {
 
       {/* Header */}
       <div className="text-center mb-16 relative z-10">
-        <h2 className="text-4xl font-bold tracking-wide">FORMATIONS</h2>
+        <h2 className="text-4xl font-bold tracking-wide">FORMATION</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4 rounded-full"></div>
         <p className="text-gray-300 mt-4 text-lg font-semibold max-w-xl mx-auto">
           Parcours d’apprentissage et diplômes qui ont renforcé mes compétences
