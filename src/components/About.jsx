@@ -8,7 +8,7 @@ import img_about2 from "/img_about2.jpg";
 const MoreCards = ({ onClose }) => {
   const cards = [
     {
-      title: "Mes Réalisations Marquantes",
+      title: "Mes Réalisations marquantes",
       content: (
         <>
           <p className="mb-4 text-justify">
