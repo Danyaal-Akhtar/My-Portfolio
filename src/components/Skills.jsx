@@ -14,6 +14,10 @@ import csharp from "/csharp.svg";
 import vscode from "/vscode.png";
 import intellij from "/intellij.svg";
 import androidstudio from "/androidstudio.png";
+import golang from "/golang.png";
+import vue from "/vue.png";
+import typescript from "/typescript.png";
+import eclipse from "/eclipse.svg";
 
 const skillsData = [
   {
@@ -21,28 +25,42 @@ const skillsData = [
     image: python,
     title: "Python",
     description:
-      "Expérience en scripts Python pour l’automatisation, analyse de données avec Pandas et visualisations avec Matplotlib.",
+      "Exploration du langage Python à travers des scripts d’automatisation, l’analyse de données avec Pandas et la création de visualisations avec Matplotlib.",
   },
   {
     id: 2,
     image: java,
     title: "Java",
     description:
-      "Exploration du développement Java avec Spring Boot et Thymeleaf pour des applications web et premières expériences avec Android Studio côté mobile.",
+      "Découverte du développement d’applications web avec Spring Boot et Thymeleaf, ainsi que des premières expériences côté mobile avec Android Studio.",
   },
   {
     id: 3,
     image: php,
     title: "PHP",
     description:
-      "Utilisation de PHP pour développer des fonctionnalités backend simples, avec gestion de sessions et interactions MySQL",
+      "Mise en place de fonctionnalités backend simples avec PHP, incluant la gestion des sessions et l’interaction avec une base de données MySQL.",
   },
   {
     id: 4,
     image: sql,
     title: "SQL",
     description:
-      "Conception et optimisation de bases de données SQL, avec gestion des relations, indexations et requêtes.",
+      "Conception et optimisation de bases de données relationnelles avec SQL, incluant la modélisation des relations, l’indexation et l’écriture de requêtes complexes.",
+  },
+  {
+    id: 9,
+    image: csharp,
+    title: "C#",
+    description:
+      "Utilisation de C# pour le développement d’applications Windows, de sites web et de jeux vidéo avec le moteur Unity.",
+  },
+  {
+    id: 13,
+    image: golang,
+    title: "Golang",
+    description:
+      "Exploration du développement backend avec Go, utilisation du framework Gin et de GORM pour créer des API REST et gérer des bases de données.",
   },
   {
     id: 5,
@@ -70,15 +88,23 @@ const skillsData = [
     image: react,
     title: "React",
     description:
-      "Compétences en React pour construire des interfaces utilisateur dynamiques.",
+      "Développement d’interfaces modernes avec React, utilisation des hooks et gestion d’état pour créer des composants dynamiques et réactifs.",
   },
   {
-    id: 9,
-    image: csharp,
-    title: "C#",
+    id: 15,
+    image: typescript,
+    title: "TypeScript",
     description:
-      "Maîtrise de C# pour le développement d'applications Windows, web et jeux avec Unity.",
+      "Utilisation de TypeScript pour créer des applications web robustes et maintenables, avec typage statique et amélioration de la fiabilité du code JavaScript.",
   },
+  {
+    id: 14,
+    image: vue,
+    title: "Vue.js",
+    description:
+      "Expérience dans le développement d’interfaces web réactives avec composants réutilisables et navigation dynamique entre pages.",
+  },
+
   {
     id: 10,
     image: vscode,
@@ -99,6 +125,13 @@ const skillsData = [
     title: "Android Studio",
     description:
       "Recours d’Android Studio pour développer et tester des applications mobiles natives Android.",
+  },
+  {
+    id: 16,
+    image: eclipse,
+    title: "Eclipse",
+    description:
+      "IDE complet principalement utilisé pour le développement Java, avec gestion de projets, débogage intégré et support pour de multiples plugins.",
   },
 ];
 

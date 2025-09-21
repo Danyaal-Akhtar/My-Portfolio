@@ -180,7 +180,7 @@ export default function About() {
           </header>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed text-justify">
-            Bonjour, je suis Danyaal AKHTAR, étudiant en 2ème année de BUT
+            Bonjour, je suis Danyaal AKHTAR, étudiant en 3ème année de BUT
             Informatique à l’Université Sorbonne Paris Nord. Passionné par
             l’informatique, je suis particulièrement attiré par la programmation
             et le développement de logiciels. J’aime explorer de nouvelles

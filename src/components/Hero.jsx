@@ -44,7 +44,7 @@ export default function Hero() {
               Danyaal AKHTAR
             </h1>
             <h2 className="text-xl sm:text-4xl md:text-2xl font-bold text-[#c744ec] mb-2">
-              Étudiant en 2ème année de BUT Informatique
+              Étudiant en 3ème année de BUT Informatique
             </h2>
           </header>
 

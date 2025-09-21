@@ -7,6 +7,7 @@ import project3 from "/project3.png";
 import project4 from "/project4.webp";
 import project5 from "/project5.webp";
 import project6 from "/project6.jpg";
+import project7 from "/project7.png";
 
 const Modal = ({ project, onClose }) => {
   if (!project) return null;
@@ -76,6 +77,7 @@ const ProjectCard = ({ image, title, description, onClick }) => (
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     AOS.init({ once: true });
@@ -87,7 +89,8 @@ export default function Projects() {
     }
   }, [selectedProject]);
 
-  const listprojects = [
+  // Projets universitaires
+  const universitaires = [
     {
       image: project1,
       title: "Référencement de jeux de société",
@@ -99,15 +102,7 @@ Ce projet m’a permis de consolider mes compétences en traitement de données,
 Langages : Python, PHP, HTML, CSS, JavaScript
 Lien : https://ludotech.kesug.com`,
     },
-    {
-      image: project2,
-      title: "Jeu de Pong",
-      description: `En 2024, j’ai décidé de me lancer dans le développement de mon tout premier jeu vidéo : une version du classique Pong, codée en Python à l’aide de la bibliothèque Pygame. Ce projet m’a permis de découvrir les bases de la programmation de jeux, notamment la gestion des événements, les mouvements des objets à l’écran, la détection des collisions, ainsi que la mise en place d’une boucle de jeu fluide.
 
-Grâce à Pygame, j’ai pu concevoir une interface simple et fonctionnelle tout en consolidant mes compétences en structuration de code, en logique temps réel et en optimisation de l’expérience utilisateur. Ce projet a constitué une étape formatrice dans mon parcours, en m’ouvrant à l’univers du développement de jeux 2D et en approfondissant ma maîtrise de Python.
-Langage : Python
-Lien : https://github.com/Danyaal-Akhtar/Pong-game.git`,
-    },
     {
       image: project3,
       title: "Organisation d'un travail d'équipe",
@@ -145,6 +140,43 @@ Ce projet m’a permis de renforcer mes compétences en modélisation de donnée
     },
   ];
 
+  // Projets personnels
+  const personnels = [
+    {
+      image: project2,
+      title: "TaskFlow – Plateforme de gestion de projets",
+      description: `TaskFlow est une application web full-stack conçue pour aider à organiser et suivre l’avancement de projets collaboratifs.
+L’utilisateur peut créer de nouveaux projets, leur associer des membres et suivre la progression grâce à un tableau de bord interactif.
+Le projet est encore en cours de développement et certaines fonctionnalités restent à finaliser
+Langages : 
+Backend : Go (Gin, GORM), MySQL, gestion de l’authentification (JWT).
+Frontend : React, hooks, appels API REST, interface responsive.
+`,
+    },
+    {
+      image: project7,
+      title: "To-do list",
+      description: `Un projet personnel visant à créer une application simple de gestion de tâches. Ce projet m’a permis de pratiquer le DOM en JavaScript, d’améliorer mes compétences en organisation du code et de renforcer mes bases en intégration front-end.
+Langage : HTML, CSS, JavaScript`,
+    },
+    {
+      image: project2,
+      title: "Jeu de Pong",
+      description: `En 2024, j’ai décidé de me lancer dans le développement de mon tout premier jeu vidéo : une version du classique Pong, codée en Python à l’aide de la bibliothèque Pygame. Ce projet m’a permis de découvrir les bases de la programmation de jeux, notamment la gestion des événements, les mouvements des objets à l’écran, la détection des collisions, ainsi que la mise en place d’une boucle de jeu fluide.
+
+Grâce à Pygame, j’ai pu concevoir une interface simple et fonctionnelle tout en consolidant mes compétences en structuration de code, en logique temps réel et en optimisation de l’expérience utilisateur. Ce projet a constitué une étape formatrice dans mon parcours, en m’ouvrant à l’univers du développement de jeux 2D et en approfondissant ma maîtrise de Python.
+Langage : Python
+Lien : https://github.com/Danyaal-Akhtar/Pong-game.git`,
+    },
+  ];
+
+  const listprojects =
+    filter === "universitaires"
+      ? universitaires
+      : filter === "personnels"
+      ? personnels
+      : [...universitaires, ...personnels];
+
   return (
     <main className="p-4">
       <section
@@ -155,15 +187,50 @@ Ce projet m’a permis de renforcer mes compétences en modélisation de donnée
       >
         <header className="text-center">
           <h1 className="text-3xl text-white sm:text-4xl font-bold mb-6">
-            Mes <span className="text-purple-400">Projets</span>
+            Mes <span className="text-purple-400">projets</span>
           </h1>
           <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
             Découvrez quelques-unes de mes réalisations universitaires et
             personnelles.
           </p>
+
+          {/* Boutons de filtre */}
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              onClick={() => setFilter("all")}
+              className={`px-4 py-2 rounded-full border-2 transition ${
+                filter === "all"
+                  ? "bg-purple-700 border-purple-700 text-white"
+                  : "border-white text-white hover:bg-purple-800"
+              }`}
+            >
+              Tous
+            </button>
+            <button
+              onClick={() => setFilter("universitaires")}
+              className={`px-4 py-2 rounded-full border-2 transition ${
+                filter === "universitaires"
+                  ? "bg-purple-700 border-purple-700 text-white"
+                  : "border-white text-white hover:bg-purple-800"
+              }`}
+            >
+              Projets universitaires
+            </button>
+            <button
+              onClick={() => setFilter("personnels")}
+              className={`px-4 py-2 rounded-full border-2 transition ${
+                filter === "personnels"
+                  ? "bg-purple-700 border-purple-700 text-white"
+                  : "border-white text-white hover:bg-purple-800"
+              }`}
+            >
+              Projets personnels
+            </button>
+          </div>
         </header>
       </section>
 
+      {/* Liste des projets filtrés */}
       <section
         data-aos="fade-up"
         data-aos-delay="500"
