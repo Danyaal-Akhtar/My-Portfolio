@@ -8,6 +8,7 @@ import project4 from "/project4.webp";
 import project5 from "/project5.webp";
 import project6 from "/project6.jpg";
 import project7 from "/project7.png";
+import taskflow from "/taskflow.png";
 
 const Modal = ({ project, onClose }) => {
   if (!project) return null;
@@ -143,7 +144,7 @@ Ce projet m’a permis de renforcer mes compétences en modélisation de donnée
   // Projets personnels
   const personnels = [
     {
-      image: project2,
+      image: taskflow,
       title: "TaskFlow – Plateforme de gestion de projets",
       description: `TaskFlow est une application web full-stack conçue pour aider à organiser et suivre l’avancement de projets collaboratifs.
 L’utilisateur peut créer de nouveaux projets, leur associer des membres et suivre la progression grâce à un tableau de bord interactif.
