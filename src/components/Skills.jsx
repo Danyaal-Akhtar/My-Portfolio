@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -18,6 +18,12 @@ import golang from "/golang.png";
 import vue from "/vue.png";
 import typescript from "/typescript.png";
 import eclipse from "/eclipse.svg";
+import postman from "/postman.png";
+import rtl from "/rtl.png";
+import jest from "/jest.png";
+import junit from "/junit.png";
+import mockito from "/mockito.png";
+import netbeans from "/netbeans.png";
 
 const skillsData = [
   {
@@ -26,6 +32,7 @@ const skillsData = [
     title: "Python",
     description:
       "Exploration du langage Python à travers des scripts d’automatisation, l’analyse de données avec Pandas et la création de visualisations avec Matplotlib.",
+    category: "Backend",
   },
   {
     id: 2,
@@ -33,6 +40,7 @@ const skillsData = [
     title: "Java",
     description:
       "Découverte du développement d’applications web avec Spring Boot et Thymeleaf, ainsi que des premières expériences côté mobile avec Android Studio.",
+    category: "Backend",
   },
   {
     id: 3,
@@ -40,6 +48,7 @@ const skillsData = [
     title: "PHP",
     description:
       "Mise en place de fonctionnalités backend simples avec PHP, incluant la gestion des sessions et l’interaction avec une base de données MySQL.",
+    category: "Backend",
   },
   {
     id: 4,
@@ -47,6 +56,7 @@ const skillsData = [
     title: "SQL",
     description:
       "Conception et optimisation de bases de données relationnelles avec SQL, incluant la modélisation des relations, l’indexation et l’écriture de requêtes complexes.",
+    category: "Base de données",
   },
   {
     id: 9,
@@ -54,6 +64,7 @@ const skillsData = [
     title: "C#",
     description:
       "Utilisation de C# pour le développement d’applications Windows, de sites web et de jeux vidéo avec le moteur Unity.",
+    category: "Backend",
   },
   {
     id: 13,
@@ -61,6 +72,7 @@ const skillsData = [
     title: "Golang",
     description:
       "Exploration du développement backend avec Go, utilisation du framework Gin et de GORM pour créer des API REST et gérer des bases de données.",
+    category: "Backend",
   },
   {
     id: 5,
@@ -68,6 +80,7 @@ const skillsData = [
     title: "HTML",
     description:
       "Langage de balisage utilisé pour structurer le contenu des pages web.",
+    category: "Frontend",
   },
   {
     id: 6,
@@ -75,6 +88,7 @@ const skillsData = [
     title: "CSS",
     description:
       "Maîtrise du CSS pour styliser des interfaces responsives et modernes.",
+    category: "Frontend",
   },
   {
     id: 7,
@@ -82,6 +96,7 @@ const skillsData = [
     title: "JavaScript",
     description:
       "Pratique de JavaScript moderne dans le développement d’interfaces utilisateur réactives.",
+    category: "Frontend",
   },
   {
     id: 8,
@@ -89,6 +104,7 @@ const skillsData = [
     title: "React",
     description:
       "Développement d’interfaces modernes avec React, utilisation des hooks et gestion d’état pour créer des composants dynamiques et réactifs.",
+    category: "Frontend",
   },
   {
     id: 15,
@@ -96,6 +112,7 @@ const skillsData = [
     title: "TypeScript",
     description:
       "Utilisation de TypeScript pour créer des applications web robustes et maintenables, avec typage statique et amélioration de la fiabilité du code JavaScript.",
+    category: "Frontend",
   },
   {
     id: 14,
@@ -103,14 +120,15 @@ const skillsData = [
     title: "Vue.js",
     description:
       "Expérience dans le développement d’interfaces web réactives avec composants réutilisables et navigation dynamique entre pages.",
+    category: "Frontend",
   },
-
   {
     id: 10,
     image: vscode,
     title: "Visual Studio Code",
     description:
-      "Maîtrise de VS Code avec des extensions, débogage intégré, et intégration Git pour un workflow de développement optimisé",
+      "Maîtrise de VS Code avec des extensions, débogage intégré, et intégration Git pour un workflow de développement optimisé.",
+    category: "IDE",
   },
   {
     id: 11,
@@ -118,6 +136,7 @@ const skillsData = [
     title: "IntelliJ",
     description:
       "Utilisation d’IntelliJ IDEA pour développer des applications Java avec des outils intégrés et une navigation efficace.",
+    category: "IDE",
   },
   {
     id: 12,
@@ -125,14 +144,65 @@ const skillsData = [
     title: "Android Studio",
     description:
       "Recours d’Android Studio pour développer et tester des applications mobiles natives Android.",
+    category: "IDE",
   },
   {
     id: 16,
-    image: eclipse,
-    title: "Eclipse",
+    image: netbeans,
+    title: "NetBeans",
     description:
-      "IDE complet principalement utilisé pour le développement Java, avec gestion de projets, débogage intégré et support pour de multiples plugins.",
+      "IDE complet pour le développement Java, PHP et C/C++, avec gestion de projets, débogage intégré et support étendu de plugins.",
+    category: "IDE",
   },
+  {
+    id: 17,
+    image: postman,
+    title: "Postman",
+    description:
+      "Outil pour tester, documenter et automatiser des API, facilitant le développement et la validation des services web.",
+    category: "Backend",
+  },
+  {
+    id: 18,
+    image: rtl,
+    title: "React Testing Library",
+    description:
+      "Utilisation de React Testing Library pour tester des composants React de manière efficace et centrée utilisateur.",
+    category: "Tests unitaires",
+  },
+  {
+    id: 19,
+    image: jest,
+    title: "Jest",
+    description:
+      "Framework de tests JavaScript pour assurer la fiabilité des applications avec tests unitaires et mocks.",
+    category: "Tests unitaires",
+  },
+  {
+    id: 20,
+    image: junit,
+    title: "JUnit",
+    description:
+      "Framework de tests Java pour vérifier le bon fonctionnement des classes et méthodes, avec exécution automatisée.",
+    category: "Tests unitaires",
+  },
+  {
+    id: 21,
+    image: mockito,
+    title: "Mockito",
+    description:
+      "Bibliothèque Java pour créer des objets simulés (mocks) et tester le comportement des composants indépendamment de leurs dépendances.",
+    category: "Tests unitaires",
+  },
+];
+
+const categories = [
+  "Tous",
+  "Frontend",
+  "Backend",
+  "Base de données",
+  "IDE",
+  "Tests unitaires",
 ];
 
 function SkillBox({ image, title, description, delay }) {
@@ -154,16 +224,31 @@ function SkillBox({ image, title, description, delay }) {
 }
 
 export default function Skills() {
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
+
   useEffect(() => {
     AOS.init({ once: true, duration: 600 });
   }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [selectedCategory]);
+
+  const filteredSkills =
+    selectedCategory.toLowerCase() === "tous"
+      ? skillsData
+      : skillsData.filter(
+          (skill) =>
+            skill.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
 
   return (
     <section
       id="skills"
       className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-white px-4 py-10"
     >
-      <div className="absolute z-0 w-72 h-36 sm:w-96 sm:h-44 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 top-10 sm:top-28 left-1/2 transform -translate-x-1/2"></div>
+      {/* Décor violet - ne bloque plus les clics */}
+      <div className="absolute z-0 w-72 h-36 sm:w-96 sm:h-44 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 top-10 sm:top-28 left-1/2 transform -translate-x-1/2 pointer-events-none"></div>
 
       <div
         data-aos="fade-up"
@@ -175,12 +260,29 @@ export default function Skills() {
             Outils <br /> et{" "}
             <span className="text-purple-400">compétences</span>
           </h1>
-          <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base"></p>
         </header>
+
+        {/* Filtres */}
+        <div className="flex flex-wrap justify-center gap-3 mt-8 mb-10 relative z-20">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                selectedCategory === cat
+                  ? "bg-purple-600 text-white"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black text-white w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {skillsData.map((skill, index) => (
+      {/* Grille des compétences */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black text-white w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-20">
+        {filteredSkills.map((skill, index) => (
           <SkillBox
             key={skill.id}
             image={skill.image}
